@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf /etc/xray/config.json
-if [ $PROTOCOL = vless ]; then
+if [ $APROTOCOL = vless ]; then
 cat << EOF > /etc/xray/config.json
 {
   "inbounds": [
@@ -27,7 +27,7 @@ cat << EOF > /etc/xray/config.json
   ]
 }
 EOF
-elif [ $PROTOCOL = vmess ]; then 
+elif [ $APROTOCOL = vmess ]; then 
 cat << EOF > /etc/xray/config.json
 {
   "inbounds": [
@@ -54,7 +54,7 @@ cat << EOF > /etc/xray/config.json
   ]
 }
 EOF
-elif [ $PROTOCOL = trojan-ws ]; then 
+elif [ $APROTOCOL = trojan-ws ]; then 
 cat << EOF > /etc/xray/config.json
 {
   "inbounds": [
