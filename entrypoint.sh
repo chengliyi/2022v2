@@ -81,6 +81,7 @@ cat << EOF > /etc/xray/config.json
 }
 EOF
 elif [ $APROTOCOL = ss-ws ]; then 
+{
 "inbounds": [
 {   
             "listen": "127.0.0.1",
