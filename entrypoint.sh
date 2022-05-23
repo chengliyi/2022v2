@@ -88,14 +88,21 @@ elif [ $APROTOCOL = ss-ws ]; then
             "port": 4324,
             "protocol": "shadowsocks",
             "settings": {
-                "method": "aes-256-cfb",
-                "password":"$PASSWORD"
+                "method": "chacha20-ietf-poly1305",
+                "password":"$PASSWORD",
+                "network": "tcp,udp"
             },
             "streamSettings": {
                 "network": "ws"
-                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
             }
-            ],
+        },
            "outbounds": [
     {
       "protocol": "freedom"
