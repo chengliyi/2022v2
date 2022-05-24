@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf /etc/xray/config.json
-if [ $APROTOCOL = vless ]; then
+if [ $APROTOCOL = vless-ws ]; then
 cat << EOF > /etc/xray/config.json
 {
   "inbounds": [
@@ -27,7 +27,7 @@ cat << EOF > /etc/xray/config.json
   ]
 }
 EOF
-elif [ $APROTOCOL = vmess ]; then 
+elif [ $APROTOCOL = vmess-ws ]; then 
 cat << EOF > /etc/xray/config.json
 {
   "inbounds": [
