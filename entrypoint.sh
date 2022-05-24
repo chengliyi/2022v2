@@ -64,7 +64,7 @@ cat << EOF > /etc/xray/config.json
       "settings": {
         "clients": [
           {
-            "password": "$PASSWORD"
+            "password": "$UUID"
           }
         ]
       },
@@ -79,36 +79,6 @@ cat << EOF > /etc/xray/config.json
     }
   ]
 }
-EOF
-elif [ $APROTOCOL = ss-ws ]; then 
-{
-"inbounds": [
-{   
-            "listen": "127.0.0.1",
-            "port": 4324,
-            "protocol": "shadowsocks",
-            "settings": {
-                "method": "chacha20-ietf-poly1305",
-                "password":"$PASSWORD",
-                "network": "tcp,udp"
-            },
-            "streamSettings": {
-                "network": "ws"
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                    "http",
-                    "tls"
-                ]
-            }
-        },
-           "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]  
-        }
 EOF
 fi
 xray -c /etc/xray/config.json
