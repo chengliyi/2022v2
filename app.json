@@ -3,7 +3,7 @@
     "description": "deploy vlvmtw to heroku",
     "keywords": [""],
     "env": {
-        "APROTOCOL": {
+        "PROTOCOL": {
             "description": "请选择代理协议（三选一，请直接复制）：vless-ws，vmess-ws，trojan-ws",
             "value": "",
             "required": true
