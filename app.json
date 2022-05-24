@@ -4,19 +4,14 @@
     "keywords": [""],
     "env": {
         "APROTOCOL": {
-            "description": "请选择代理协议（四选一，请直接复制）：vless，vmess，trojan-ws，ss-ws",
+            "description": "请选择代理协议（三选一，请直接复制）：vless-ws，vmess-ws，trojan-ws",
             "value": "",
             "required": true
         },
         "UUID": {
-            "description": "如选择vless或者vmess协议，请输入UUID，其他协议请保持默认空白",
+            "description": "请输入UUID（vless-ws或vmess-ws为用户ID，trojan-ws为密码）",
             "value": "", 
-            "required": false
-        },
-        "PASSWORD": {
-            "description": "如选择Trojan-ws或者ss-ws协议，请输入密码，其他协议请保持默认空白",
-            "value": "",
-            "required": false
+            "required": true
         }
     },
     "repository": "",
