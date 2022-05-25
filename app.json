@@ -4,12 +4,12 @@
     "keywords": [""],
     "env": {
         "PROTOCOL": {
-            "description": "请选择代理协议（三选一，请直接复制）：vless-ws，vmess-ws，trojan-ws",
-            "value": "",
+            "description": "Xray三合一协议共存：vless-ws、vmess-ws、trojan-ws ，path路径为空或/",
+            "value": "小白专享，切勿滥用，以免封号",
             "required": true
         },
         "UUID": {
-            "description": "请输入UUID（vless-ws或vmess-ws为用户ID，trojan-ws为密码）",
+            "description": "请输入UUID（表现为：vless-ws与vmess-ws为用户ID，trojan-ws为密码）",
             "value": "", 
             "required": true
         }
