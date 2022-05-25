@@ -39,12 +39,10 @@ cat << EOF > /etc/xray/config.json
           {
             "id": "$UUID"
           }
-        ]
-        
+        ]    
       },
       "streamSettings": {
-        "network": "ws"
-         
+        "network": "ws"     
       }
     }
   ],
