@@ -35,15 +35,16 @@ cat << EOF > /etc/xray/config.json
       "port": $PORT,
       "protocol": "vmess",
       "settings": {
-        "decryption": "none",
         "clients": [
           {
             "id": "$UUID"
           }
         ]
+        
       },
       "streamSettings": {
         "network": "ws"
+         
       }
     }
   ],
